@@ -21,11 +21,8 @@ for line in lines:
     splitted_line = line.split()
     splitted_line = [int(val) for val in splitted_line]
 
-    if sorted(splitted_line) == splitted_line or sorted(splitted_line, reverse=True) == splitted_line:
-        if check_line(splitted_line):
-            safe_reports += 1
-        else:
-            safe_reports += try_remove_one_element(splitted_line)
+    if (sorted(splitted_line) == splitted_line or sorted(splitted_line, reverse=True) == splitted_line) and check_line(splitted_line):
+        safe_reports += 1
     else:
         safe_reports += try_remove_one_element(splitted_line)
 
