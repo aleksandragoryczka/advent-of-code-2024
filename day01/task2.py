@@ -11,7 +11,7 @@ for line in lines:
 occurrences_dict = {}
 sum = 0
 for value in first_column:
-    if value in occurrences_dict.keys():
+    if value in occurrences_dict:
         sum += value * occurrences_dict[value]
     else:
         occurrences = second_column.count(value)
