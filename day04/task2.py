@@ -31,25 +31,21 @@ def diagonal_check_left_down(i: int, j: int) -> bool:
         
 def check_vertical_left(i: int, j: int) -> int:
     if diagonal_check_right_down(i, j) and lines[i][j+2] == "S" and lines[i+2][j] == "M":
-        print(f"VERTICAL_LEFT i: {i} j: {j}")
         return 1
     return 0
 
 def check_vertical_right(i: int, j: int) -> int:
     if diagonal_check_left_up(i, j) and lines[i-2][j] == "M" and lines[i][j-2] == "S":
-        print(f"VERTICAL_RIGHT i: {i} j: {j}")
         return 1
     return 0
 
 def check_horizontal_up(i: int, j: int) -> int:
     if diagonal_check_left_down(i, j) and lines[i+2][j] == "S" and lines[i][j-2] == "M":
-        print(f"HORIZONTAL_UP i: {i} j: {j}")
         return 1
     return 0
 
 def check_horizontal_down(i: int, j: int) -> int:
     if diagonal_check_right_up(i, j) and lines[i][j+2] == "M" and lines[i-2][j] == "S":
-        print(f"HORIZONTAL_DOWN i: {i} j: {j}")
         return 1
     return 0
 
