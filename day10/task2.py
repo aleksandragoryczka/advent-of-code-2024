@@ -26,7 +26,7 @@ def find_recursively_next_element(el: int, i: int, j: int) -> int:
     return search
 
 sum = 0
-counter = 1
+
 for i, row in enumerate(board):
     for j, el in enumerate(row):
         if el == 0:
